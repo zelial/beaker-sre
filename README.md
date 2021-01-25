@@ -24,5 +24,6 @@ Documentation and tools for deploying a monitoring dashbaord for [Beaker](https:
    1. allow access from outside (optional):
        1. `firewall-cmd --add-port=9090/tcp --permanent`
        1. `firewall-cmd --reload`
- 1. go to `http://ip.of.prometheus.server:9090`
+ 1. Verify Prometheus functionality
+    1. go to `http://ip.of.prometheus.server:9090`
 ### Grafana
