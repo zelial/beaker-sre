@@ -14,7 +14,7 @@ Documentation and tools for deploying a monitoring dashbaord for [Beaker](https:
 1. as prometheus user in its homedir:
    1. download latest release from https://prometheus.io/download/
    1. untar and symlink to `prometheus` directory
-   1. deploy [config file](./prometheus/ prometheus.yml) to the prometheus directory
+   1. deploy [config file](./prometheus/prometheus.yml) to the prometheus directory
 1. as root
    1. deploy [service file](./prometheus/prometheus.service) to systemd
       1. `cp prometheus.service /etc/systemd/system/prometheus.service`
