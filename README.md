@@ -1,2 +1,2 @@
-# beaker-sre
-Beaker dashboard onitoring machine reliability and availability
+# Beaker SRE
+Documentation and tools for deploying a monitoring dashbaord for [Beaker](https://beaker-project.org/).
