@@ -1,0 +1,16 @@
+[Unit]
+Description=Prometheus Monitoring
+Documentation=https://github.com/zelial/beaker-sre
+After=basic.target network.target
+
+[Service]
+User=prometheus
+Group=prometheus
+WorkingDirectory=/home/prometheus/prometheus/
+ExecStart=/home/prometheus/prometheus/prometheus --config.file=/home/prometheus/prometheus/prometheus.yml --storage.tsdb.path=/home/prometheus/prometheus/data/ --web.enable-lifecycle --storage.tsdb.retention.time=180d
+ExecReload=/usr/bin/curl -s -XPOST localhost:9090/-/reload
+KillMode=process
+Restart=always
+
+[Install]
+WantedBy=multi-user.target beaker-sre.target
