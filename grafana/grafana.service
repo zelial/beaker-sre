@@ -1,0 +1,15 @@
+[Unit]
+Description=Grafana dashboard
+Documentation=https://github.com/zelial/beaker-sre
+After=basic.target network.target prometheus.service
+
+[Service]
+User=grafana
+Group=grafana
+WorkingDirectory=/home/grafana/grafana/
+ExecStart=/home/grafana/grafana/bin/grafana-server
+Restart=always
+
+[Install]
+WantedBy=multi-user.target beaker-sre.target
+
