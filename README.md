@@ -51,3 +51,4 @@ Documentation and tools for deploying a monitoring dashbaord for [Beaker](https:
 1. Connect Grafana to Prometheus
     1. in WebUI navigate to Configuration -> Data sources -> Add data source -> Prometheus -> Select
     1. Use `http://localhost:9090` as the suggested URL, keep the rest on default values. Confirm.
+1. Setup Alerting as you see fit
