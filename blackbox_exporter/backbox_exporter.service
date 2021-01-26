@@ -1,0 +1,15 @@
+[Unit]
+Description=Blackbox exporter for Prometheus 
+Documentation=https://github.com/prometheus/blackbox_exporter
+After=basic.target network.target
+
+[Service]
+User=beaker-sre
+Group=beaker-sre
+WorkingDirectory=/home/beaker-sre/blackbox_exporter/
+ExecStart=/home/beaker-sre/blackbox_exporter/blackbox_exporter
+Restart=always
+
+[Install]
+WantedBy=multi-user.target beaker-sre.target
+
