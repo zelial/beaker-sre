@@ -7,7 +7,7 @@ After=basic.target network.target
 User=prometheus
 Group=prometheus
 WorkingDirectory=/home/prometheus/prometheus/
-ExecStart=/home/prometheus/prometheus/prometheus --config.file=/home/prometheus/prometheus/prometheus.yml --storage.tsdb.path=/home/prometheus/prometheus/data/ --web.enable-lifecycle --storage.tsdb.retention.time=180d
+ExecStart=/home/prometheus/prometheus/prometheus --config.file=/home/prometheus/prometheus/prometheus.yml --storage.tsdb.path=/home/prometheus/prometheus/data/ --web.enable-lifecycle --storage.tsdb.retention.time=365d
 ExecReload=/usr/bin/curl -s -XPOST localhost:9090/-/reload
 KillMode=process
 Restart=always
