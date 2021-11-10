@@ -28,23 +28,6 @@ All pieces are available as container images in public registries so using docke
        1. `firewall-cmd --reload`
  1. Verify Prometheus functionality
     1. go to `http://ip.of.prometheus.server:9090`
-### Blackbox exporter
-1. create user beaker-sre
-    1. `useradd beaker-sre` 
-1. as beaker-sre user in its homedir:
-    1. download latest binary release from `https://github.com/prometheus/blackbox_exporter/releases`
-    1. untar and symlink to `blackbox_exporter` directory
-1. as root
-   1. deploy [service file](./blackbox_exporter/blackbox_exporter.service) to systemd
-      1. `cp blackbox_exporter.service /etc/systemd/system/blackbox_exporter.service`
-      1. `systemctl enable blackbox_exporter.service`
-   1. start blackbox_exporter
-      1. `systemctl start blackbox_exporter.service`
-1. Verify blackbox_exporter functionality
-    1. `systemctl status blackbox_exporter`
-    1. go to `http://ip.of.prometheus.server:3000`, Status -> Targets
-       1. blackbox should be listed in blue color and as "(X/X up)"
-       1. on the graph page, try to execute query using the blackbox_exporter's data, e.g.`probe_http_duration_seconds`.
 ### Grafana
 1. create user grafana
    1. `useradd grafana`
