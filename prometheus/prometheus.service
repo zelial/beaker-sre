@@ -1,6 +1,6 @@
 [Unit]
 Description=Prometheus Monitoring
-Documentation=https://github.com/zelial/beaker-sre
+Documentation=https://github.com/nick-child-ibm/beaker-sre
 After=basic.target network.target
 
 [Service]
