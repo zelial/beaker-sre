@@ -88,7 +88,7 @@ All pieces are available as container images in public registries so using docke
       1. Where:
          1. `<beaker_db_ip>` is the IP address of the machine hosting the Beaker mariaDB, likely the lab controller
          2. `<username>` and `<password>` are the mysql credentials given in the previous step
-   1. `curl -v -H "Content-Type: application/json" -X POST -d test_query.json http://localhost:5000`
+   1. `curl -v -H "Content-Type: application/json" -X POST -d @test_query.json http://localhost:5000`
       1. output should contiain `{"cnt":"<number>"}` where `<number>` is the total number of machines in the beaker network
 ### prometheus-sql
    1. Read [prometheus-sql](https://github.com/chop-dbhi/prometheus-sql) docs
